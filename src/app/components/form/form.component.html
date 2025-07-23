@@ -1,0 +1,27 @@
+<div class="container">
+  <form class="form" [formGroup]="form" (ngSubmit)="onSubmit()">
+    <label class="label" for="nome">Nome</label>
+    <input id=nome class="input" type="text" placeholder="Digite seu nome" formControlName="nome">
+   
+    <label class="label" for="email">E-mail</label>
+    <input id="email" class="input" type="email" placeholder="Digite seu E-mail " formControlName="email">
+
+    <label class="label">Sexo</label>
+    <div class="containerRadio">
+      <label class="radio">
+        <input type="radio" name="sexo" value="masculino">
+        <span class="inputRadio">Masculino</span>
+      </label>
+
+      <label class="radio">
+        <input type="radio" name="sexo" value="feminino">
+        <span class="inputRadio">Feminino</span>
+      </label>  
+    </div>
+     
+
+    <label for=""></label>
+
+    <button class="button" type="submit">Enviar</button>
+   </form>  
+</div>

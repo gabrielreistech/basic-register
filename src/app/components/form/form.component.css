@@ -1,0 +1,38 @@
+.container{
+    width: 30vw;
+    height: 50vh;
+    border: 1px solid black;
+    border-radius: 1rem;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.label{
+    padding-top: 1rem;
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+.input{
+    width: 50%;
+    height: 2rem;
+}
+
+.containerRadio{
+    display: flex;
+    gap: 2rem;
+    background-color: red;
+}
+
+.radio{
+    display: flex;
+    gap: 0.3rem;
+}
+
+.inputRadio{
+    font-size: 1.2rem;
+}
