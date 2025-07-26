@@ -1,0 +1,51 @@
+.container{
+    display: flex;
+    height: 10vh;
+    background-color: rgb(15, 178, 228);
+}
+
+.containerInterno{
+    display: flex;
+    width: 100vw;
+}
+
+.titulo{
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;    
+    cursor: pointer;
+}
+
+.textoDoTitulo{
+    color: black;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.textoDoTitulo:hover{
+    transform: scale(0.98);
+}
+
+.navBar{
+    width: 50vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.lista{
+    text-decoration: none;
+    color: black;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    font-weight: bold;
+}
+
+.lista:hover{
+    transform: scale(1.1);
+}
