@@ -1,25 +1,36 @@
 <div class="container">
+    <!--Imagem do Registro-->
     <div class="imagem">
         <img src="../../../assets/IconsNotebook.png" alt="imagem de um notebook">
     </div>
     <div class="formularioContainer">
-        <form class="formulario">
+        <form #formRef="ngForm" class="formulario" (ngSubmit)="onSubmit(formRef)">
             <h2 class="tituloDoFormulario">Registro</h2>
             <!--Campo Nome-->
-            <input class="input" type="text" placeholder="Digite o seu nome">
+            <input [(ngModel)]="user.nome" name="nome" class="input" type="text" placeholder="Digite o seu nome" required>
 
             <!--Campo Email-->
-            <input class="input" type="text" placeholder="Digite seu email (fictício)">
+            <input [(ngModel)]="user.email" name="email" class="input" type="text" placeholder="Digite seu email (fictício)" required>
 
             <!--Campo Sexo-->
             <label class="label" for="sexo">Sexo</label>
             <div class="inputRadio">
-             <input type="radio" name="sexo" value="masculino">
+             <label>   
+             <input [(ngModel)]="user.sexo" name="sexo" type="radio" value="Masculino" required>
               <span class="span">Masculino</span>
-             <input type="radio" name="sexo" value="feminino">
+            </label>
+            <label>
+             <input [(ngModel)]="user.sexo" name="sexo" type="radio" value="Feminino">
               <span class="span">Feminino</span>
+            </label>
             </div>
-            <button class="botaoEnviar">Enviar</button>
+            <div class="button">
+                <button type="submit" class="btn"><i class="animation"></i>ENVIAR<i class="animation"></i>
+                </button>
+            </div>
+            <div *ngIf="formularioIncompleto" class="mensagemDeErro">
+                <span>Não está completo!</span>
+            </div>
         </form>
     </div>
 </div>

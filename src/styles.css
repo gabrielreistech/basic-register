@@ -3,3 +3,10 @@
     padding: 0;
     margin: 0;
 }
+
+.centerPage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh; /* 90 de vh porque o header tem 10 de vh. Total 100vh*/
+}
