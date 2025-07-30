@@ -26,10 +26,11 @@
             </div>
             <div class="button">
                 <button type="submit" class="btn"><i class="animation"></i>ENVIAR<i class="animation"></i>
-                </button>
+                </button>   
             </div>
+            <app-alert></app-alert>
             <div *ngIf="formularioIncompleto" class="mensagemDeErro">
-                <span>Não está completo!</span>
+                <span>Seu formulário não está completo!</span>
             </div>
         </form>
     </div>

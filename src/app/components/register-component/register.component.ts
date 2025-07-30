@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup, NgForm } from '@angular/forms';
+import { NgForm } from '@angular/forms';
+import { ListService } from '../../service/list-service.service';
+import { AlertComponent } from '../alert/alert.component';
+import { ViewChild } from '@angular/core';
 
 interface User{
   nome:string;
@@ -14,6 +17,10 @@ interface User{
 })
 export class RegisterComponent {
 
+  @ViewChild(AlertComponent) alertComponent!: AlertComponent;
+
+  constructor(private listService: ListService){}
+
     formularioIncompleto : boolean = false;
 
     user:User = {} as User;
@@ -21,7 +28,8 @@ export class RegisterComponent {
     onSubmit(formRef:NgForm){
       if(formRef.valid){
         this.formularioIncompleto = false;
-        console.log(this.user)
+        this.listService.adicionarPessoa(this.user);
+        this.alertComponent.showAlert();
       }
       else{
         this.formularioIncompleto = true;
