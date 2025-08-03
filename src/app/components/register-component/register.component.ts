@@ -28,7 +28,7 @@ export class RegisterComponent {
     onSubmit(formRef:NgForm){
       if(formRef.valid){
         this.formularioIncompleto = false;
-        this.listService.adicionarPessoa(this.user);
+        this.listService.registerPerson(this.user);
         this.alertComponent.showAlert();
       }
       else{

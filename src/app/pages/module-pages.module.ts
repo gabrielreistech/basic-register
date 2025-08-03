@@ -4,6 +4,7 @@ import { HomePageComponent } from './home-page/home.component';
 import { ComponentsModule } from '../components/module-components.module';
 import { ListRegisterPageComponent } from './list-register-page/list-register-page.component';
 import { AboutPageComponent } from './about-page/about-page.component';
+import { UpdatePageComponent } from './update-page/update-user.component';
 
 
 
@@ -12,6 +13,7 @@ import { AboutPageComponent } from './about-page/about-page.component';
     HomePageComponent,
     ListRegisterPageComponent,
     AboutPageComponent,
+    UpdatePageComponent,
   ],
   imports: [
     CommonModule,
@@ -21,6 +23,7 @@ import { AboutPageComponent } from './about-page/about-page.component';
     HomePageComponent,
     ListRegisterPageComponent,
     AboutPageComponent,
+    UpdatePageComponent
   ]
 })
 export class PagesModule { }

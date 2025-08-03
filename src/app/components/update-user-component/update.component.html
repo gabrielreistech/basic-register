@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="containerInternal">
+        <div class="containerInput">
+            <label class="label" for="name">Nome:</label>
+            <input class="input" [(ngModel)]="user.nome" type="text" placeholder="Digite o seu novo nome">
+        </div>
+        <div>
+            <label class="label" for="email">Email:</label>
+            <input class="input" [(ngModel)]="user.email" type="email" placeholder="Digite o seu novo email">
+        </div>
+        <div>
+           <div class="containerRadio">
+            <label class="sexo" for="sexo">Sexo:</label>
+            <input class="inputRadio" [(ngModel)]="user.sexo" name="sexo" type="radio" value="Masculino"><span class="label">Masculino</span>
+            <input class="inputRadio" [(ngModel)]="user.sexo" type="radio" value="Feminino"><span class="label">Feminino</span>
+           </div>
+        </div>
+        <div>
+            <button class="button update">Alterar</button>
+        </div>
+    </div>
+</div>
+

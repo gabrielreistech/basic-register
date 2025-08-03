@@ -7,6 +7,7 @@ import { ListRegisterComponent } from './list-register-component/list-register.c
 import { RouterModule } from '@angular/router';
 import { CardComponent } from './card-component/card.component';
 import { AlertComponent } from './alert/alert.component';
+import { UpdateComponent } from './update-user-component/update.component';
 
 
 
@@ -17,6 +18,7 @@ import { AlertComponent } from './alert/alert.component';
     ListRegisterComponent,
     CardComponent,
     AlertComponent,
+    UpdateComponent,
   ],
   imports: [
     CommonModule,
@@ -29,6 +31,7 @@ import { AlertComponent } from './alert/alert.component';
     ListRegisterComponent,
     CardComponent,
     AlertComponent,
+    UpdateComponent,
   ]
 })
 export class ComponentsModule { }

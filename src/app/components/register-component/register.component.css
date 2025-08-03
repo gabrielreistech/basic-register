@@ -114,10 +114,14 @@
   }
 
 .mensagemDeErro{
-   color: red;
+   background-color: rgba(238, 55, 86, 0.831);
+   height: 4vh;
+   color: white;
    margin-top: 1rem;
    display: flex;
    justify-content: center;
+   align-items: center;
    font-size: 1.3rem;
    font-weight: bold;
+   border-radius: 1rem;
 }

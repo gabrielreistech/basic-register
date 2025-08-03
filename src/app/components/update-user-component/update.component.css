@@ -1,26 +1,28 @@
 .container{
-    width: 58vw;
-    height: 10vh;
     display: flex;
-    gap: 2rem;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    border: none;
-    border-radius: 0.7rem;
-    margin-top: 0.6rem;
-    margin-bottom: 0.5rem;
-    background-color: rgba(171, 162, 162, 0.59);
-    cursor: pointer;
+    justify-content: center;
+    width: 60vw;
+    height: 60vh;
+    border-radius: 0.4rem;
+    background-color: rgb(215, 210, 210);
+    overflow-y: auto;
 }
 
-.text{
-    font-size: 1.26rem;
-    font-weight: bold;
-}
-
-.containerButton{
+.containerInternal{
+    background-color: rgb(241, 236, 236);
     display: flex;
-    gap: 1rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 20vw;
+    height: 30vh;
+    border-radius: 0.5rem;
+}
+
+.containerRadio{
+    margin-top: 1rem;
 }
 
 .button {
@@ -38,6 +40,7 @@
     font-size: 14px;
     font-weight: bold;
     letter-spacing: 1px;
+    margin-top: 1rem;
   }
   
   /* Botão Alterar (Amarelo) */
@@ -58,20 +61,30 @@
     transform: scale(0.98);
   }
   
-  /* Botão Excluir (Vermelho) */
-  .delete {
-    background-image: linear-gradient(to top, #d64541 0%, #e74c3c 80%, #ff6f61 100%);
-    border-color: #c0392b;
-    color: white;
+  .containerInput{
+    margin-bottom: 1rem;    
   }
-  
-  .delete:hover {
-    box-shadow: inset 0 0 2px 2px #ff9f9f, 0 2px 4px rgba(0, 0, 0, 0.1);
-    transform: scale(1.02);
+
+  .label{
+    font-size: 1.5rem;
   }
-  
-  .delete:active,
-  .delete:focus {
-    box-shadow: inset 0 0 3px 2px #a93226, 0 1px 2px rgba(0, 0, 0, 0.1);
-    transform: scale(0.98);
+
+  .input{
+    margin-left: 0.3rem;
+    width: 10vw;
+    height: 4vh;
+    font-size: 1rem;
+    border: none;
+    border-radius: 0.3rem;
+  }
+
+  .sexo{
+    font-size: 1.5rem;
+  }
+
+  .inputRadio{
+    background-color: red;
+    font-size: 2rem;
+    margin-right: 0.2rem;
+    margin-left: 0.3rem;
   }
