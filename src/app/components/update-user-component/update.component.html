@@ -1,23 +1,92 @@
 <div class="container">
-    <div class="containerInternal">
+    <div  *ngIf="userObersavable | async as userData">
+      <form class="containerInternal" #form="ngForm" (ngSubmit)="update(userData)">
+           
+       <h2 class="titleForm">Altere o usuário desejado</h2>
+        <!-- Nome -->
         <div class="containerInput">
-            <label class="label" for="name">Nome:</label>
-            <input class="input" [(ngModel)]="user.nome" type="text" placeholder="Digite o seu novo nome">
+          <label class="label" for="nome">Nome:</label>
+          <input
+            class="input"
+            id="nome"
+            name="nome"
+            [(ngModel)]="userData.nome"
+            #nome="ngModel"
+            type="text"
+            placeholder="Digite o seu novo nome"
+            required
+          />
+          <div class="error" *ngIf="nome.invalid && (nome.touched || form.submitted)">
+            Nome é obrigatório.
+          </div>
         </div>
+  
+        <!-- Email -->
         <div>
-            <label class="label" for="email">Email:</label>
-            <input class="input" [(ngModel)]="user.email" type="email" placeholder="Digite o seu novo email">
+          <label class="label" for="email">Email:</label>
+          <input
+            class="input"
+            id="email"
+            name="email"
+            [(ngModel)]="userData.email"
+            #email="ngModel"
+            type="email"
+            placeholder="Digite o seu novo email"
+            required
+            email
+          />
+          <div class="error" *ngIf="email.invalid && (email.touched || form.submitted)">
+            Email é obrigatório e deve ser válido.
+          </div>
         </div>
+  
+        <!-- Sexo (radio) -->
+        <div class="containerRadio">
+          <label class="sexo" for="sexo">Sexo:</label>
+  
+          <input
+            class="inputRadio"
+            type="radio"
+            id="sexoMasculino"
+            name="sexo"
+            [(ngModel)]="userData.sexo"
+            #sexo="ngModel"
+            value="Masculino"
+            required
+          />
+          <span class="label">Masculino</span>
+  
+          <input
+            class="inputRadio"
+            type="radio"
+            id="sexoFeminino"
+            name="sexo"
+            [(ngModel)]="userData.sexo"
+            value="Feminino"
+            required
+          />
+          <span class="label">Feminino</span>
+  
+          <div class="error" *ngIf="sexo.invalid && (sexo.touched || form.submitted)">
+            Por favor, selecione o sexo.
+          </div>
+        </div>
+  
+        <!-- Botão submit -->
         <div>
-           <div class="containerRadio">
-            <label class="sexo" for="sexo">Sexo:</label>
-            <input class="inputRadio" [(ngModel)]="user.sexo" name="sexo" type="radio" value="Masculino"><span class="label">Masculino</span>
-            <input class="inputRadio" [(ngModel)]="user.sexo" type="radio" value="Feminino"><span class="label">Feminino</span>
-           </div>
+          <button class="button update" type="submit" [disabled]="form.invalid">
+            Alterar
+          </button>
+          <button [disabled]="form.pristine" class="button delete" (click)="goBack()">
+            Voltar
+          </button>
         </div>
-        <div>
-            <button class="button update">Alterar</button>
-        </div>
+        <app-alert-update></app-alert-update>
+      </form>
     </div>
-</div>
-
+  
+    <div class="offUser" *ngIf="!(userObersavable | async)">
+      <h2>Nenhum usuário para ser alterado</h2>
+    </div>
+  </div>
+  

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ListService } from '../../service/list-service.service';
+import { UserService } from '../../service/user-service.service';
 
 @Component({
   selector: 'app-list-register',
@@ -9,8 +9,8 @@ import { ListService } from '../../service/list-service.service';
 
 export class ListRegisterComponent {
 
-  constructor(public listService: ListService){}
+  constructor(public userService: UserService){}
 
-  users = this.listService.listRegister$; 
+  users = this.userService.listRegister$; 
   
 }

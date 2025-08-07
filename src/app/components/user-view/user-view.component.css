@@ -1,70 +1,43 @@
-.container{
+.container {
+    width: 30vw;
+    height: 70vh;
+    border-radius: 30px;
+    background: #e0e0e0;
+    box-shadow: 15px 15px 30px #bebebe,
+               -15px -15px 30px #ffffff;
+  }
+
+  .containerInternal {
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-    width: 60vw;
-    height: 60vh;
-    border-radius: 0.4rem;
-    background-color: rgb(215, 210, 210);
-    overflow-y: auto;
-}
-
-.containerInternal{
-    background-color: rgb(241, 236, 236);
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    width: 40vw;
-    height: 50vh;
-    border-radius: 0.5rem;
-}
-
-.titleForm{
-  height: 10vh;
-  font-size: 2rem;
-}
-
-.containerRadio{
-    margin-top: 1rem;
-}
-
-  .containerInput{
-    margin-bottom: 1rem;    
-  }
-
-  .label{
-    font-size: 1.5rem;
-  }
-
-  .input{
-    margin-left: 0.3rem;
-    width: 15vw;
-    height: 4vh;
-    font-size: 1rem;
-    border: none;
-    border-radius: 0.3rem;
-  }
-
-  .sexo{
-    font-size: 1.5rem;
-  }
-
-  .inputRadio{
-    background-color: red;
+    flex-direction: column;
     font-size: 2rem;
-    margin-right: 0.2rem;
-    margin-left: 0.3rem;
+    height: 100%;
+  }
+
+  .titleUserData {
+    margin-bottom: 4rem;
+  }
+
+  .info {
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+
+  .text {
+    text-align: center;
+    font-size: 1.8rem;
   }
 
   .button {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 0.6rem;
     outline: none;
     cursor: pointer;
-    width: 6vw;
+    width: 4vw;
     height: 3.5vh;
     border-radius: 30px;
     border: 1px solid;
@@ -73,7 +46,6 @@
     font-size: 14px;
     font-weight: bold;
     letter-spacing: 1px;
-    margin-top: 1rem;
   }
   
   /* Botão Alterar (Amarelo) */
@@ -110,13 +82,4 @@
   .delete:focus {
     box-shadow: inset 0 0 3px 2px #a93226, 0 1px 2px rgba(0, 0, 0, 0.1);
     transform: scale(0.98);
-  }
-  
-  .error{
-    text-align: center;
-    color: red;
-  }
-
-  .offUser{
-    font-size: 1.5rem;
   }

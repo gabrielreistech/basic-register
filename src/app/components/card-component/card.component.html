@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" (click)="userData(cardData)">
    <div class="text">
      Nome: {{cardData?.nome}}
    </div>
@@ -9,7 +9,7 @@
      Sexo: {{cardData?.sexo}}
    </div>
    <div class="containerButton">
-     <button class="button update">Alterar</button>
+     <button class="button update" (click)="update(cardData)">Alterar</button>
      <button class="button delete" (click)="remove(cardData)">Excluir</button>
   </div>
 </div>

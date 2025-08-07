@@ -1,5 +1,5 @@
 .container{
-    width: 58vw;
+    width: 78vw;
     height: 10vh;
     display: flex;
     gap: 2rem;
@@ -16,6 +16,8 @@
 .text{
     font-size: 1.26rem;
     font-weight: bold;
+    width: 26%;
+    text-align: center;
 }
 
 .containerButton{

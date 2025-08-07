@@ -1,13 +1,16 @@
-<div class="container">
- <div *ngIf="users|async as userList"> 
+<div *ngIf="users|async as userList">
+ <div class="container" *ngIf="userList.length > 0; else NoUsers"> 
   <div *ngIf="userList.length > 0">
    <ul *ngFor="let user of userList">
     <li style="list-style: none;"><app-card [cardData]="user"></app-card></li>
    </ul>
   </div>
-  <div class="semCadastros" *ngIf="userList.length === 0">
-     <h2>No momento não tem cadastrados</h2>
-  </div>
  </div> 
+  
+ <ng-template #NoUsers>
+ <div class="containerOffUser">
+    <h3>No momento não a usuário cadastrado</h3>
+ </div>
+</ng-template>
 </div>
 

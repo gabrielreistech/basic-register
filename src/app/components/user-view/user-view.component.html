@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="containerInternal" *ngIf="userView | async as userView">
+        <div class="titleUserData">
+            <h3>Dados do Usuário</h3>
+        </div>
+        <div class="info">
+            <h3>Nome</h3> 
+            <p class="text">{{userView.nome}}</p>
+        </div>
+        <div class="info">
+            <h3>Email</h3>
+            <p class="text">{{userView.email}}</p>
+        </div>
+        <div class="info">
+            <h3>Sexo</h3>
+            <p class="text">{{userView.sexo}}</p>
+        </div>
+        <button class="button update" (click)="update(userView)">Alterar</button>
+        <button class="button delete" (click)="goBack()">Voltar</button>
+    </div>
+</div>
