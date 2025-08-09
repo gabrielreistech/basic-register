@@ -1,16 +1,20 @@
 <div class="container">
-    <!--Imagem do Registro-->
-    <div class="imagem">
-        <img src="../../../assets/IconsNotebook.png" alt="imagem de um notebook">
-    </div>
     <div class="formularioContainer">
         <form #formRef="ngForm" class="formulario" (ngSubmit)="onSubmit(formRef)">
             <h2 class="tituloDoFormulario">Registro</h2>
+            
             <!--Campo Nome-->
-            <input [(ngModel)]="user.nome" name="nome" class="input" type="text" placeholder="Digite o seu nome" required>
+            <input [(ngModel)]="user.nome" name="nome" class="input" type="text" placeholder="Digite o seu nome" required minlength="5" #nome="ngModel">
+            <p class="error" *ngIf="nome.invalid && (nome.touched || nome.dirty)">
+                Nome é obrigatório e deve ter pelo menos 5 caracteres.
+              </p>
 
             <!--Campo Email-->
-            <input [(ngModel)]="user.email" name="email" class="input" type="text" placeholder="Digite seu email (fictício)" required>
+            <input [(ngModel)]="user.email" name="email" class="input" type="email" placeholder="Digite seu email (fictício)" required #email="ngModel">
+            <p class="error" *ngIf="email.invalid && (email.touched || email.dirty)">
+                <span *ngIf="email.errors?.['required']">Email é obrigatório.</span>
+                <span *ngIf="email.errors?.['email']">Email inválido.</span>
+              </p>
 
             <!--Campo Sexo-->
             <label class="label" for="sexo">Sexo</label>
@@ -33,5 +37,9 @@
                 <span>Seu formulário não está completo!</span>
             </div>
         </form>
+    </div>
+    <!--Imagem do Registro-->
+    <div class="imagem">
+        <img src="../../../assets/IconsNotebook.png" alt="imagem de um notebook">
     </div>
 </div>

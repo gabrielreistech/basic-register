@@ -5,6 +5,7 @@ import { ComponentsModule } from '../components/module-components.module';
 import { ListRegisterPageComponent } from './list-register-page/list-register-page.component';
 import { AboutPageComponent } from './about-page/about-page.component';
 import { UpdatePageComponent } from './update-page/update-user.component';
+import { UserPageComponent } from './user-page/user.component';
 
 
 
@@ -14,6 +15,7 @@ import { UpdatePageComponent } from './update-page/update-user.component';
     ListRegisterPageComponent,
     AboutPageComponent,
     UpdatePageComponent,
+    UserPageComponent,
   ],
   imports: [
     CommonModule,
@@ -23,7 +25,8 @@ import { UpdatePageComponent } from './update-page/update-user.component';
     HomePageComponent,
     ListRegisterPageComponent,
     AboutPageComponent,
-    UpdatePageComponent
+    UpdatePageComponent,
+    UserPageComponent,
   ]
 })
 export class PagesModule { }

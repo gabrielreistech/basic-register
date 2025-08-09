@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 
 export interface User{
+  id?:number;
   nome:string;
   email:string;
   sexo:string;

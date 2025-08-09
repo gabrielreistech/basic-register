@@ -1,6 +1,6 @@
 <div class="container">
-    <div  *ngIf="userObersavable | async as userData">
-      <form class="containerInternal" #form="ngForm" (ngSubmit)="update(userData)">
+    <div  *ngIf="userView">
+      <form class="containerInternal" #form="ngForm" (ngSubmit)="update(userView)">
            
        <h2 class="titleForm">Altere o usuário desejado</h2>
         <!-- Nome -->
@@ -10,7 +10,7 @@
             class="input"
             id="nome"
             name="nome"
-            [(ngModel)]="userData.nome"
+            [(ngModel)]="userView.nome"
             #nome="ngModel"
             type="text"
             placeholder="Digite o seu novo nome"
@@ -28,7 +28,7 @@
             class="input"
             id="email"
             name="email"
-            [(ngModel)]="userData.email"
+            [(ngModel)]="userView.email"
             #email="ngModel"
             type="email"
             placeholder="Digite o seu novo email"
@@ -49,7 +49,7 @@
             type="radio"
             id="sexoMasculino"
             name="sexo"
-            [(ngModel)]="userData.sexo"
+            [(ngModel)]="userView.sexo"
             #sexo="ngModel"
             value="Masculino"
             required
@@ -61,7 +61,7 @@
             type="radio"
             id="sexoFeminino"
             name="sexo"
-            [(ngModel)]="userData.sexo"
+            [(ngModel)]="userView.sexo"
             value="Feminino"
             required
           />
@@ -74,10 +74,10 @@
   
         <!-- Botão submit -->
         <div>
-          <button class="button update" type="submit" [disabled]="form.invalid">
+          <button class="button update" type="submit" [disabled]="(form.invalid || form.pristine)">
             Alterar
           </button>
-          <button [disabled]="form.pristine" class="button delete" (click)="goBack()">
+          <button [disabled]="!form.pristine" class="button delete" (click)="goBack()">
             Voltar
           </button>
         </div>
@@ -85,7 +85,7 @@
       </form>
     </div>
   
-    <div class="offUser" *ngIf="!(userObersavable | async)">
+    <div class="offUser" *ngIf="!(userView)">
       <h2>Nenhum usuário para ser alterado</h2>
     </div>
   </div>
