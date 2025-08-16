@@ -118,3 +118,9 @@
         display: flex;
     }
 }
+
+@media (max-width: 403px) {
+    .title {
+        width: 80%;
+    }
+}
