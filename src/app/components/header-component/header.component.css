@@ -130,3 +130,9 @@
         font-size: 2rem;
     }
 }
+
+@media (max-width:322px) {
+    .title {
+        font-size: 1.3rem;
+    }
+}
