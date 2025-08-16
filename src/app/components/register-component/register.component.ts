@@ -21,7 +21,7 @@ export class RegisterComponent {
 
   constructor(private userService: UserService){}
 
-  incompletFormulary : boolean = true;
+  incompletFormulary : boolean = false;
 
     user:User = {} as User;
 
