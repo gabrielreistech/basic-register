@@ -1,7 +1,7 @@
 <div class="container">
-    <div class="formularioContainer">
-        <form #formRef="ngForm" class="formulario" (ngSubmit)="onSubmit(formRef)">
-            <h2 class="tituloDoFormulario">Registro</h2>
+    <div class="formularyContainer">
+        <form #formRef="ngForm" class="formulary" (ngSubmit)="onSubmit(formRef)">
+            <h2 class="titleFormulary">Registro</h2>
             
             <!--Campo Nome-->
             <input [(ngModel)]="user.nome" name="nome" class="input" type="text" placeholder="Digite o seu nome" required minlength="5" #nome="ngModel">
@@ -33,13 +33,13 @@
                 </button>   
             </div>
             <app-alert></app-alert>
-            <div *ngIf="formularioIncompleto" class="mensagemDeErro">
+            <div *ngIf="formularioIncompleto" class="errorMessage">
                 <span>Seu formulário não está completo!</span>
             </div>
         </form>
     </div>
     <!--Imagem do Registro-->
-    <div class="imagem">
+    <div class="image">
         <img src="../../../assets/IconsNotebook.png" alt="imagem de um notebook">
     </div>
 </div>

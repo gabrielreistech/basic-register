@@ -7,21 +7,21 @@
 }
 
 
-.formularioContainer{
+.formularyContainer{
     width: 60%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.formulario{
+.formulary{
     display: flex;
     justify-content: center;
     flex-direction: column;
     width: 70%;
 }
 
-.tituloDoFormulario{
+.titleFormulary{
     text-align: center;
     margin-bottom: 1rem;
 }
@@ -105,7 +105,7 @@
   }
 
 
-.imagem{
+.image{
   width: 40%;
   display: flex;
   justify-content: center;
@@ -113,7 +113,7 @@
   transition: 1s ease-in-out;
 }
 
-.imagem:hover{
+.image:hover{
    transform: scale(1.1);
 }
 
@@ -121,7 +121,7 @@ img {
  width: 25%;
 }
 
-.mensagemDeErro{
+.errorMessage{
    background-color: rgba(238, 55, 86, 0.831);
    height: 4vh;
    color: white;
