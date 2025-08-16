@@ -137,3 +137,9 @@
       width: 100%;
     }
   }
+
+  @media (max-width:403px) {
+    .textName {
+      font-size: 1rem;
+    }
+  }
