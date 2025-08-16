@@ -8,9 +8,9 @@
     border-radius: 0.4rem;
     background-color: rgb(215, 210, 210);
     overflow-y: auto;
-}
+  }
 
-.containerInternal{
+ .containerInternal{
     background-color: rgb(241, 236, 236);
     display: flex;
     flex-direction: column;
@@ -19,16 +19,16 @@
     width: 40rem;
     height: 50vh;
     border-radius: 0.5rem;
-}
+  }
 
-.titleForm{
+ .titleForm{
   height: 10vh;
   font-size: 2rem;
-}
+  }
 
-.containerRadio{
+ .containerRadio{
     margin-top: 1rem;
-}
+  }
 
   .containerInput{
     margin-bottom: 1rem;    
@@ -144,5 +144,23 @@
   }
 
   @media (max-width: 403px) {
-    
+    .titleForm {
+      font-size: 1.3rem;
+    }
+
+    .label {
+      font-size: 1.1rem;
+    }
+
+    .input {
+      width: 12rem;
+    }
+
+    .sexo {
+      font-size:  1.1rem;
+    }
+
+    .label {
+      font-size:  1.1rem;
+    }
   }
