@@ -161,3 +161,9 @@ img {
     width: 80vw;
   }
 }
+
+@media (max-width:403px) {
+  .span {
+    font-size: 0.8rem;
+  }
+}
