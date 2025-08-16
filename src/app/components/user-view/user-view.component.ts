@@ -21,6 +21,11 @@ export class UserViewComponent {
     this.router.navigate(["/updateuser"]);
   }
 
+  remove(user:User | undefined){
+    this.userService.removePerson(user);
+    this.router.navigate(['/listregister']);
+  }
+
   goBack(){
     this.router.navigate(["/listregister"])
   }
