@@ -3,7 +3,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 60vw;
+    width: 60rem;
     height: 60vh;
     border-radius: 0.4rem;
     background-color: rgb(215, 210, 210);
@@ -16,7 +16,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 40vw;
+    width: 40rem;
     height: 50vh;
     border-radius: 0.5rem;
 }
@@ -40,7 +40,7 @@
 
   .input{
     margin-left: 0.3rem;
-    width: 15vw;
+    width: 15rem;
     height: 4vh;
     font-size: 1rem;
     border: none;
@@ -64,7 +64,7 @@
     justify-content: center;
     outline: none;
     cursor: pointer;
-    width: 6vw;
+    width: 6rem;
     height: 3.5vh;
     border-radius: 30px;
     border: 1px solid;
@@ -119,4 +119,26 @@
 
   .offUser{
     font-size: 1.5rem;
+  }
+
+  @media (max-width: 987px) {
+    .container {
+      width: 90vw;
+    }
+
+    .containerInternal {
+      width: 70vw;
+    }
+  }
+
+  @media (max-width:498px) {
+    .titleForm {
+      font-size: 1.5rem;
+    }
+ }
+
+  @media (max-width:452px) {
+    .containerInternal {
+      width: 88vw;
+    }
   }
