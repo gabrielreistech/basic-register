@@ -142,3 +142,7 @@
       width: 88vw;
     }
   }
+
+  @media (max-width: 403px) {
+    
+  }

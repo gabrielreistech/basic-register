@@ -117,3 +117,15 @@
     width: 90vw;
   }
 }
+
+@media (max-width:403px) {
+  .titleUserData {
+    font-size: 1rem;
+  }
+  .info {
+    font-size: 1rem;
+  }
+  .text {
+    font-size: 1rem;
+  }
+}
