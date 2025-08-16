@@ -47,8 +47,13 @@
 }
 
 .inputRadio input {
-    margin-top: 0.5rem;
     cursor: pointer;
+}
+
+.inputRadio label {
+  display: flex;
+  align-items: center;        
+  cursor: pointer;
 }
 
 .span {
@@ -163,7 +168,7 @@ img {
 }
 
 @media (max-width:403px) {
-  .span {
+  .span { 
     font-size: 0.8rem;
   }
 }
