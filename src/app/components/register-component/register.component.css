@@ -134,7 +134,7 @@ img {
    display: flex;
    justify-content: center;
    align-items: center;
-   font-size: 1.3rem;
+   font-size: clamp(0.6rem, 1.3vw, 1rem);
    font-weight: bold;
    border-radius: 1rem;
 }
@@ -144,6 +144,7 @@ img {
   margin-top: -1rem;
   text-align: center;
   font-weight: 600;
+  font-size: 0.9rem;
 }
 
 @media (max-width:1638px) {

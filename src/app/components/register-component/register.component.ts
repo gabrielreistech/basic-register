@@ -21,18 +21,18 @@ export class RegisterComponent {
 
   constructor(private userService: UserService){}
 
-    formularioIncompleto : boolean = false;
+  incompletFormulary : boolean = true;
 
     user:User = {} as User;
 
     onSubmit(formRef:NgForm){
       if(formRef.valid){
-        this.formularioIncompleto = false;
+        this.incompletFormulary = false;
         this.userService.registerPerson(this.user);
         this.alertComponent.showAlert();
       }
       else{
-        this.formularioIncompleto = true;
+        this.incompletFormulary = true;
       }
     }
 }
