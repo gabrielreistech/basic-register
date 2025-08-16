@@ -1,4 +1,4 @@
-.container{
+.container {
     width: 78vw;
     height: 10vh;
     display: flex;
@@ -13,11 +13,29 @@
     cursor: pointer;
 }
 
-.text{
+.textName {
     font-size: 1.26rem;
     font-weight: bold;
     width: 26%;
     text-align: center;
+}
+
+.textEmail {
+  font-size: 1.26rem;
+  font-weight: bold;
+  width: 26%;
+  text-align: center;
+}
+
+.textGender {
+  font-size: 1.26rem;
+  font-weight: bold;
+  width: 26%;
+  text-align: center;
+}
+
+.span {
+  color: rgb(201, 5, 5);
 }
 
 .containerButton{
@@ -31,13 +49,13 @@
     justify-content: center;
     outline: none;
     cursor: pointer;
-    width: 4vw;
+    width: clamp(5vw, 6vw, 6vw);
     height: 3.5vh;
     border-radius: 30px;
     border: 1px solid;
     transition: all 0.2s ease;
     font-family: "Source Sans Pro", sans-serif;
-    font-size: 14px;
+    font-size: clamp(12px, 1vw, 14px);
     font-weight: bold;
     letter-spacing: 1px;
   }
@@ -76,4 +94,46 @@
   .delete:focus {
     box-shadow: inset 0 0 3px 2px #a93226, 0 1px 2px rgba(0, 0, 0, 0.1);
     transform: scale(0.98);
+  }
+
+  @media (max-width: 1021px) {
+    .container {
+      gap: 5rem;
+    }
+    .textName {
+      width: 100%;
+    }
+    .textEmail {
+      width: 100%;
+    }
+    .textGender {
+      display: none;
+     }
+  }
+
+  @media (max-width:950px) {
+    .textEmail {
+      display: none;
+    }
+    .button {
+      width: 8vw;
+    }
+  }
+
+  @media (max-width:607px) {
+    .button {
+      font-size: 10px;
+    }
+  }
+
+  @media (max-width:500px) {
+    .container {
+      gap: 0;
+    }
+    .button {
+      display: none;
+    }
+    .textName {
+      width: 100%;
+    }
   }

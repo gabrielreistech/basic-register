@@ -1,12 +1,12 @@
 <div class="container" (click)="userData(cardData)">
-   <div class="text">
-     Nome: {{cardData?.nome}}
+   <div class="textName">
+     <span class="span">Nome:</span> {{cardData?.nome}}
    </div>
-   <div class="text">
-     Email: {{cardData?.email}}
+   <div class="textEmail">
+    <span class="span">Email:</span> {{cardData?.email}}
    </div>
-   <div class="text">
-     Sexo: {{cardData?.sexo}}
+   <div class="textGender">
+    <span class="span">Sexo:</span> {{cardData?.sexo}}
    </div>
    <div class="containerButton">
      <button class="button update" (click)="update(cardData)">Alterar</button>
