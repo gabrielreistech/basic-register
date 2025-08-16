@@ -124,6 +124,9 @@
         width: 80%;
         font-size: 1.3rem;
     }
+    .ulNavBarSide {
+        top: 11%;
+    }
 }
 
 @media (max-width:322px) {
