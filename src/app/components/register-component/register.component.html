@@ -10,8 +10,8 @@
               </p>
 
             <!--Campo Email-->
-            <input [(ngModel)]="user.email" name="email" class="input" type="email" placeholder="Digite seu email (fictício)" required #email="ngModel">
-            <p class="error" *ngIf="email.invalid && (email.touched || email.dirty)">
+            <input [(ngModel)]="user.email" name="email" class="input" type="email" placeholder="Digite seu email (fictício)" required #email="ngModel" email>
+            <p class="error" *ngIf="email.invalid && incompletFormulary">
                 <span *ngIf="email.errors?.['required']">Email é obrigatório.</span>
                 <span *ngIf="email.errors?.['email']">Email inválido.</span>
               </p>
