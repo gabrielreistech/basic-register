@@ -27,3 +27,9 @@
         width: 80vw;
     }
 }
+
+@media (max-width:403px) {
+    .containerOffUser {
+        font-size: 0.6rem;
+    }
+}
