@@ -15,9 +15,10 @@
             type="text"
             placeholder="Digite o seu novo nome"
             required
+            minlength="5"
           />
           <div class="error" *ngIf="nome.invalid && (nome.touched || form.submitted)">
-            Nome é obrigatório.
+            Nome é obrigatório. <br> E precisa ter no mínimo 5 caracteres.
           </div>
         </div>
   
